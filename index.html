@@ -1,1 +1,169 @@
-default
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chicago Pothole Completion</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Chicago Pothole Completion">
+  <meta name="author" content="CBrown">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Chicago Pothole Completion</h1>
+    <h2></h2>
+    <p>CBrown<br/>Johns Hopkins University - Data Products Course</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Chicago, City of Open Data ... and Potholes</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Chicago is a leading city in terms of open data practices.
+<a href="https://data.cityofchicago.org/">https://data.cityofchicago.org/</a></p>
+
+<p>It&#39;s only natural, given the reputation for clean and open government. Actually, that was a joke.</p>
+
+<p>Chicago is more known for machine politics and &#39;clout&#39;. If you know a guy that knows a guy, you can get something done. Like get a pothole in your neighborhood fixed.</p>
+
+<p>Open data and clout politics seem like an unlikely mix, but hey, an open door is an open door. We thought it could be instructive to learn if open data would show relatively fair policies across the city, or if your likelihood of getting a pothole on your street fixed still depends greatly on the neighborhood you live in.</p>
+
+<p>The title of the dataset used for this study is &quot;311 Service Requests - Pot Holes Reported&quot;.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>About the Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The data records contain multiple geographic divisions as follows (with count): Wards (50); Police Districts (26); Zip Codes (62); and Community Areas (77).</p>
+
+<p>Wards might seem useful, as they are political divisions tied to an Alderman. But Wards are redistricted every 10 years and the boundaries have recently changed.</p>
+
+<p>Police districts would be useful for crime statistics or 911 call data, but not 311.</p>
+
+<p>Zip codes might be useful, but Chicagoans don&#39;t associate a location to most of the zip codes around the city, so it would be difficult for them to compare neighborhoods.</p>
+
+<p>The Community Areas are really the best choice. The neighborhoods have been established for a long time. People identify with them, and Chicagoans generally have some idea of most of the neighborhoods on their &#39;side&#39; of the city, and at least a few on the other side.
+<a href="https://en.wikipedia.org/wiki/Community_areas_in_Chicago">https://en.wikipedia.org/wiki/Community_areas_in_Chicago</a></p>
+
+<p>The dataset was downloaded and cleaned of duplicates, records without a valid Community Area indicator, and a handful of outlier records of over 280 days to completion.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Results</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Each neighborhood is compared to the city average of 20.36 days and median of 7 days, with a 60-day completion chart displayed. Expected 60-day completion is in the mid-80% range.</p>
+
+<p>If you know Chicago neighborhoods, you will probably find some surprises, and will definitely find some non-surprises.</p>
+
+<p>Residents of the famously connected neighborhood of Bridgeport, ancestral home of the Daley clan, unsurprisingly (to a Chicagoan) can expect much faster repair times for their potholes. Their median repair time is 0 (zero) days, aka same day service. And their average time is 9.78, less than half of the city&#39;s 20.36 performance, with 95% completion within 60 days.</p>
+
+<pre><code class="r">9.78/20.36
+</code></pre>
+
+<pre><code>## [1] 0.4804
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>What&#39;s Next?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Mining other Chicago 311 service data (tree trimming, grafitti busting), to compare performance and gain a greater understanding of the how services are distributed across the city.</p>
+
+<p>Tying 311 service data to US Census data to determine whether neighborhood characteristics like ethnicity, income, education level, family size, homeownership rates, etc. appear to have any relationship to service times.</p>
+
+<p>Taking a closer look at the data to determine other factors that may legitimately impact response time. For example, integrating with vehicle traffic data to determine high traffic areas that could reasonably be expected to demand faster than normal pothole repair times because of greater visibility and impact.</p>
+
+<p>Comparing reporting rates in different neighborhoods to try to gauge community involvement.</p>
+
+<p>Incorporating maps to show neighborhood locations into the results pages.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Chicago, City of Open Data ... and Potholes'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='About the Data'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Results'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='What&#39;s Next?'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
